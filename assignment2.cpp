@@ -70,16 +70,16 @@ int main()
 		}
 		else // user wins aka winner
 		{
-			if (guesses >= 5)  //winner wins on first guess
+			if (guesses == 5)  //winner wins on first guess
 			{
 				cout << "You Win on your first guess! Good JOb!" << endl;
-				win = true;
-			{
+			}
+      else 
+      {
 				//user wins on any other guess
 				cout << "You WIN! Awesome Job!" << endl;
-				win = true;
-				}
-			}
+      }
+      win = true;
 		}
 
     guesses = guesses - 1;
