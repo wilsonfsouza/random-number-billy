@@ -44,7 +44,7 @@ int main()
 		{
 			cout << "The numer: " << useNum << "you enter is out of the range. Please re-enter a number:\n";
 			cin >> useNum;
-			guesses = guesses + 1;// add one guesses counter so user does not use a guess
+			continue;
 		}
 		else if (useNum < randNum)
 		{
