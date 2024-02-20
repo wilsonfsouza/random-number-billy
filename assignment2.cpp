@@ -38,7 +38,7 @@ int main()
 	cin >> useNum; //user entered number
 	cout << endl;
 	//loop to determine if user is winner
-	while (!win && guesses >= -1)
+	while (!win && guesses > 0)
 	{
 		if (useNum > 100)
 		{
