@@ -20,8 +20,11 @@
 #include <iostream>
 using namespace std;
 
+const int MAX_NUMBER = 100;
+const int INITIAL_GUESSES = 5;
+
 bool isValidGuess(int guess) {
-    return guess >= 1 && guess <= 100;
+    return guess >= 1 && guess <= MAX_NUMBER;
 }
 
 void printUserWinCondition(bool isFirstGuess) {
@@ -39,11 +42,11 @@ int main()
 	int useNum; //user entered number
 	bool win = false; //boolean to determiune winner turns to true if winner
 
-	int guesses = 5; // number of user guesses initalize to 5 (give users 5 guesses)
+	int guesses = INITIAL_GUESSES; // number of user guesses initalize to 5 (give users 5 guesses)
 	// seed number of random number
 	unsigned seed = time(0);
 		srand(seed); //seeded random number
-	randNum = 1 + rand() % 100; //computer random number 1-100
+	randNum = 1 + rand() % MAX_NUMBER; //computer random number 1-100
 	cout << setw(30) << fixed << "Number guesing game:\n";
 	cout << setw(5) << fixed << "I am thinking of a number. Ca you guess the number?:\n";
 	cout << setw(16) << fixed << "You have" << guesses << "guess(es) left:\n";
@@ -57,7 +60,7 @@ int main()
 
 		if (!isValidGuess(useNum))
 		{
-			cout << "The number: " << useNum << " you enter is out of the range. Please re-enter a number between 1 and 100:\n";
+			cout << "The number: " << useNum << " you enter is out of the range. Please re-enter a number between 1 and " << MAX_NUMBER << ": \n";
 			continue;
 		}
 		
