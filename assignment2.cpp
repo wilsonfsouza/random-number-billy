@@ -47,9 +47,9 @@ int main()
 	unsigned seed = time(0);
 		srand(seed); //seeded random number
 	randNum = 1 + rand() % MAX_NUMBER; //computer random number 1-100
-	cout << setw(30) << fixed << "Number guesing game:\n";
-	cout << setw(5) << fixed << "I am thinking of a number. Ca you guess the number?:\n";
-	cout << setw(16) << fixed << "You have" << guesses << "guess(es) left:\n";
+	cout << setw(30) << fixed << "Number guessing game:\n";
+	cout << setw(5) << fixed << "I am thinking of a number. Can you guess the number?:\n";
+	cout << setw(16) << fixed << "You have " << guesses << "guess(es) left:\n";
 	cout << endl;
 	
 	cout << endl;
