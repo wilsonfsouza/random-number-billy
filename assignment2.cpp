@@ -55,7 +55,7 @@ int main()
 				if (guesses < 1)
 				{
 				cout << "The numner the computer chose was " << randNum << endl;
-				break:
+				break;
 				}
 		}
 		else if (useNum > randNum)
