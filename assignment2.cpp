@@ -64,22 +64,10 @@ int main()
     if (useNum < randNum)
 		{
 			cout << "Too low. Try again, " << endl;
-				if (guesses < 1)
-				{
-				cout << "The numner the computer chose was " << randNum << endl;
-				break;
-				}
 		}
 		else if (useNum > randNum)
 		{
 			cout << "Too High. Try again." << endl;
-				// Print computer guess on last turn
-				if (guesses > 5)
-				{
-				cout << "The number the computer chose was" << randNum << endl;
-				break;
-				}
-
 		}
 		else // user wins aka winner
 		{
@@ -89,6 +77,10 @@ int main()
 
     guesses = guesses - 1;
 		cout << "You have " << guesses << " guess(es) left. \n";
+  }
+
+  if (!win) {
+    cout << "The number the computer chose was: " << randNum << endl;
   }
 
   //close program and exit gracefully
