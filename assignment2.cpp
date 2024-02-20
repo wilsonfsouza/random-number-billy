@@ -20,6 +20,10 @@
 #include <iostream>
 using namespace std;
 
+bool isValidGuess(int guess) {
+    return guess >= 1 && guess <= 100;
+}
+
 void printUserWinCondition(bool isFirstGuess) {
   if (isFirstGuess) {
     cout << "You Win on your first guess! Good JOb!" << endl;
@@ -49,13 +53,14 @@ int main()
 	//loop to determine if user is winner
 	while (!win && guesses > 0)
 	{
-		if (useNum > 100)
+		if (!isValidGuess(useNum))
 		{
-			cout << "The numer: " << useNum << "you enter is out of the range. Please re-enter a number:\n";
+			cout << "The number: " << useNum << " you enter is out of the range. Please re-enter a number between 1 and 100:\n";
 			cin >> useNum;
 			continue;
 		}
-		else if (useNum < randNum)
+		
+    if (useNum < randNum)
 		{
 			cout << "Too low. Try again, " << endl;
 			cin >> useNum;
@@ -86,6 +91,7 @@ int main()
     guesses = guesses - 1;
 		cout << "You have " << guesses << " guess(es) left. \n";
   }
-//close program and exit gracefully
+
+  //close program and exit gracefully
 	return 0;
 }
