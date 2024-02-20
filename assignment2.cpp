@@ -51,7 +51,7 @@ int main()
 			cout << "Too low. Try again, " << endl;
 			cin >> useNum;
 			guesses = guesses - 1;
-			cout << "You have" << "guess(es) left. \n";
+			cout << "You have " << guesses << " guess(es) left. \n";
 				if (guesses < 1)
 				{
 				cout << "The numner the computer chose was " << randNum << endl;
