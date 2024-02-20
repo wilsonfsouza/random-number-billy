@@ -48,22 +48,22 @@ int main()
 	cout << setw(5) << fixed << "I am thinking of a number. Ca you guess the number?:\n";
 	cout << setw(16) << fixed << "You have" << guesses << "guess(es) left:\n";
 	cout << endl;
-	cin >> useNum; //user entered number
+	
 	cout << endl;
 	//loop to determine if user is winner
 	while (!win && guesses > 0)
 	{
+    cin >> useNum; //user entered number
+
 		if (!isValidGuess(useNum))
 		{
 			cout << "The number: " << useNum << " you enter is out of the range. Please re-enter a number between 1 and 100:\n";
-			cin >> useNum;
 			continue;
 		}
 		
     if (useNum < randNum)
 		{
 			cout << "Too low. Try again, " << endl;
-			cin >> useNum;
 				if (guesses < 1)
 				{
 				cout << "The numner the computer chose was " << randNum << endl;
@@ -73,7 +73,6 @@ int main()
 		else if (useNum > randNum)
 		{
 			cout << "Too High. Try again." << endl;
-			cin >> useNum;
 				// Print computer guess on last turn
 				if (guesses > 5)
 				{
