@@ -50,8 +50,6 @@ int main()
 		{
 			cout << "Too low. Try again, " << endl;
 			cin >> useNum;
-			guesses = guesses - 1;
-			cout << "You have " << guesses << " guess(es) left. \n";
 				if (guesses < 1)
 				{
 				cout << "The numner the computer chose was " << randNum << endl;
@@ -62,7 +60,6 @@ int main()
 		{
 			cout << "Too High. Try again." << endl;
 			cin >> useNum;
-			guesses = guesses - 1; //decrement guess(es) left.\n";
 				// Print computer guess on last turn
 				if (guesses > 5)
 				{
@@ -84,6 +81,9 @@ int main()
 				}
 			}
 		}
+
+    guesses = guesses - 1;
+		cout << "You have " << guesses << " guess(es) left. \n";
   }
 //close program and exit gracefully
 	return 0;
