@@ -19,6 +19,15 @@
 #include <ctime>
 #include <iostream>
 using namespace std;
+
+void printUserWinCondition(bool isFirstGuess) {
+  if (isFirstGuess) {
+    cout << "You Win on your first guess! Good JOb!" << endl;
+  } else {
+    cout << "You WIN! Awesome Job!" << endl;
+  }
+}
+
 int main()
 {
 	// intialize and declare varaibles 
@@ -70,15 +79,7 @@ int main()
 		}
 		else // user wins aka winner
 		{
-			if (guesses == 5)  //winner wins on first guess
-			{
-				cout << "You Win on your first guess! Good JOb!" << endl;
-			}
-      else 
-      {
-				//user wins on any other guess
-				cout << "You WIN! Awesome Job!" << endl;
-      }
+      printUserWinCondition(guesses == 5);
       win = true;
 		}
 
